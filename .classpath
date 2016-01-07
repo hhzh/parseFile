@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="E:/other/jar2/jxl.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/org.json.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar2/commons-io-2.2.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar2/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar2/poi-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar2/poi-examples-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar2/poi-excelant-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar2/poi-ooxml-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar2/poi-ooxml-schemas-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar2/poi-scratchpad-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar2/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/jdom.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/xerces.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/jaxen-full.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/jaxen-1.1-beta-6.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/jaxen-core.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/jaxen-dom4j.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/jaxen-exml.jar"/>
+	<classpathentry kind="lib" path="E:/other/jar/saxpath.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
