@@ -1,6 +1,4 @@
-package parseJson;
-
-import java.util.List;
+package com.parseJson;
 
 import com.google.gson.Gson;
 

@@ -1,4 +1,4 @@
-package parseJson;
+package com.parseJson;
 
 public class Person {
 

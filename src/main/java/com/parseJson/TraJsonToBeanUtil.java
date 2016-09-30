@@ -1,4 +1,4 @@
-package parseJson;
+package com.parseJson;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

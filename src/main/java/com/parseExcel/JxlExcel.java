@@ -1,7 +1,4 @@
-package parseExcel;
-
-import java.io.File;
-import java.io.IOException;
+package com.parseExcel;
 
 import jxl.Cell;
 import jxl.Sheet;
@@ -12,6 +9,9 @@ import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
+
+import java.io.File;
+import java.io.IOException;
 
 public class JxlExcel {
 	public static void main(String[] args) {
@@ -24,26 +24,26 @@ public class JxlExcel {
 		File file=new File("E:/test.xlsx");
 		try {
 			file.createNewFile();
-			//´´½¨¹¤×÷²¾
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			WritableWorkbook workbook = Workbook.createWorkbook(file);
-			//´´½¨sheet
+			//ï¿½ï¿½ï¿½ï¿½sheet
 			WritableSheet sheet = workbook.createSheet("sheet1", 0);
 			Label label = null;
-			//µÚÒ»ÐÐÉèÖÃÁÐÃû
+			//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			for (int i = 0; i < title.length; i++) {
 				label = new Label(i,0,title[i]);
 				sheet.addCell(label);	
 			}
-			//×·¼ÓÊý¾Ý
+			//×·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			for (int i = 1; i < 10; i++) {
 				label = new Label(0,i,"a" + 1);
 				sheet.addCell(label);
 				label = new Label(1,i,"user" + i);
 				sheet.addCell(label);
-				label = new Label(2,i,"ÄÐ");
+				label = new Label(2,i,"ï¿½ï¿½");
 				sheet.addCell(label);
 			}
-			//Ð´ÈëÊý¾Ý
+			//Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			workbook.write();
 			workbook.close();
 		} catch (IOException e) {
@@ -57,11 +57,11 @@ public class JxlExcel {
 	
 	public static void readExcel(){
 		try {
-			//´´½¨workbook
+			//ï¿½ï¿½ï¿½ï¿½workbook
 			Workbook workbook = Workbook.getWorkbook(new File("e:/jxl_test.xls"));
-			//»ñÈ¡µÚÒ»¸ö¹¤×÷±ísheet
+			//ï¿½ï¿½È¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sheet
 			Sheet sheet = workbook.getSheet(0);
-			//»ñÈ¡Êý¾Ý
+			//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
 			for (int i = 0; i < sheet.getRows(); i++) {
 				for (int j = 0; j < sheet.getColumns(); j++) {
 					Cell cell = sheet.getCell(j,i);

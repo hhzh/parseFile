@@ -1,8 +1,4 @@
-package parseExcel;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+package com.parseExcel;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -14,6 +10,10 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class PoiExcel {
 	public static void main(String[] args) {
 //		writeExcel();
@@ -24,19 +24,19 @@ public class PoiExcel {
 	public static void writeExcel(){
 		String[] title = {"id","name","sex"};
 		
-		//´´½¨Excel¹¤×÷²¾
+		//ï¿½ï¿½ï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		HSSFWorkbook workbook = new HSSFWorkbook();
-		//´´½¨Ò»¸ö¹¤×÷±ísheet
+		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sheet
 		HSSFSheet sheet = workbook.createSheet();
-		//´´½¨µÚÒ»ÐÐ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 		HSSFRow row = sheet.createRow(0);
 		HSSFCell cell = null;
-		//²åÈëµÚÒ»ÐÐÊý¾Ý id,name,sex
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ id,name,sex
 		for (int i = 0; i < title.length; i++) {
 			cell = row.createCell(i);
 			cell.setCellValue(title[i]);
 		}
-		//×·¼ÓÊý¾Ý
+		//×·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for (int i = 1; i <= 10; i++) {
 			HSSFRow nextrow = sheet.createRow(i);
 			HSSFCell cell2 = nextrow.createCell(0);
@@ -44,13 +44,13 @@ public class PoiExcel {
 			cell2 = nextrow.createCell(1);
 			cell2.setCellValue("user" + i);
 			cell2 = nextrow.createCell(2);
-			cell2.setCellValue("ÄÐ");
+			cell2.setCellValue("ï¿½ï¿½");
 		}
-		//´´½¨Ò»¸öÎÄ¼þ
+		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ä¼ï¿½
 		File file = new File("e:/poi_test.xls");
 		try {
 			file.createNewFile();
-			//½«ExcelÄÚÈÝ´æÅÌ
+			//ï¿½ï¿½Excelï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½
 			FileOutputStream stream = FileUtils.openOutputStream(file);
 			workbook.write(stream);
 			stream.close();
@@ -62,19 +62,19 @@ public class PoiExcel {
 	public static void writeExcel2(){
 		String[] title = {"id","name","sex"};
 		
-		//´´½¨Excel¹¤×÷²¾
+		//ï¿½ï¿½ï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		XSSFWorkbook workbook = new XSSFWorkbook();
-		//´´½¨Ò»¸ö¹¤×÷±ísheet
+		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sheet
 		Sheet sheet = workbook.createSheet();
-		//´´½¨µÚÒ»ÐÐ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 		Row row = sheet.createRow(0);
 		Cell cell = null;
-		//²åÈëµÚÒ»ÐÐÊý¾Ý id,name,sex
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ id,name,sex
 		for (int i = 0; i < title.length; i++) {
 			cell = row.createCell(i);
 			cell.setCellValue(title[i]);
 		}
-		//×·¼ÓÊý¾Ý
+		//×·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for (int i = 1; i <= 10; i++) {
 			Row nextrow = sheet.createRow(i);
 			Cell cell2 = nextrow.createCell(0);
@@ -82,13 +82,13 @@ public class PoiExcel {
 			cell2 = nextrow.createCell(1);
 			cell2.setCellValue("user" + i);
 			cell2 = nextrow.createCell(2);
-			cell2.setCellValue("ÄÐ");
+			cell2.setCellValue("ï¿½ï¿½");
 		}
-		//´´½¨Ò»¸öÎÄ¼þ
+		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ä¼ï¿½
 		File file = new File("e:/poi_test2.xlsx");
 		try {
 			file.createNewFile();
-			//½«ExcelÄÚÈÝ´æÅÌ
+			//ï¿½ï¿½Excelï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½
 			FileOutputStream stream = FileUtils.openOutputStream(file);
 			workbook.write(stream);
 			stream.close();
@@ -98,22 +98,22 @@ public class PoiExcel {
 	}
 	
 	public static void readExcel(){
-		// ÐèÒª½âÎöµÄExcelÎÄ¼þ
+		// ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Excelï¿½Ä¼ï¿½
 		File file = new File("e:/poi_test.xls");
 		try {
-			// ´´½¨Excel£¬¶ÁÈ¡ÎÄ¼þÄÚÈÝ
+			// ï¿½ï¿½ï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
 			HSSFWorkbook workbook = new HSSFWorkbook(
 					FileUtils.openInputStream(file));
-			// »ñÈ¡µÚÒ»¸ö¹¤×÷±íworkbook.getSheet("Sheet0");
+			// ï¿½ï¿½È¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½workbook.getSheet("Sheet0");
 			// HSSFSheet sheet = workbook.getSheet("Sheet0");
-			// ¶ÁÈ¡Ä¬ÈÏµÚÒ»¸ö¹¤×÷±ísheet
+			// ï¿½ï¿½È¡Ä¬ï¿½Ïµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sheet
 			HSSFSheet sheet = workbook.getSheetAt(0);
 			int firstRowNum = 0;
-			// »ñÈ¡sheetÖÐ×îºóÒ»ÐÐÐÐºÅ
+			// ï¿½ï¿½È¡sheetï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ðºï¿½
 			int lastRowNum = sheet.getLastRowNum();
 			for (int i = firstRowNum; i <= lastRowNum; i++) {
 				HSSFRow row = sheet.getRow(i);
-				// »ñÈ¡µ±Ç°ÐÐ×îºóµ¥Ôª¸ñÁÐºÅ
+				// ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ðºï¿½
 				int lastCellNum = row.getLastCellNum();
 				for (int j = 0; j < lastCellNum; j++) {
 					HSSFCell cell = row.getCell(j);

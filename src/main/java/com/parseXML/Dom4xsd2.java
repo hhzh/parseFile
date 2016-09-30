@@ -1,4 +1,4 @@
-package parseXML;
+package com.parseXML;
 
 import java.io.File;
 import java.util.Iterator;

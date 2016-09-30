@@ -1,4 +1,4 @@
-package parseJson;
+package com.parseJson;
 
 public class ParseMsg {
 	public static void main(String[] args) {

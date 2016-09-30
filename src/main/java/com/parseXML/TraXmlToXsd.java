@@ -1,15 +1,15 @@
-package parseXML;
+package com.parseXML;
+
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.JDOMException;
+import org.jdom.input.SAXBuilder;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.JDOMException;
-import org.jdom.input.SAXBuilder;
 
 public class TraXmlToXsd {
 	
@@ -19,15 +19,15 @@ public class TraXmlToXsd {
 	
 	public static void main(String[] args) {
 		TraXmlToXsd px=new TraXmlToXsd();
-		px.xmlFilePath="D:/aa.xml";//ÐèÒª´«ÈëµÄxmlÎÄ¼þÂ·¾¶
-		px.xsdFilePath="D:/ab.xsd";//Ð´³öµÄxsdÎÄ¼þÂ·¾¶
+		px.xmlFilePath="D:/aa.xml";//ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½xmlï¿½Ä¼ï¿½Â·ï¿½ï¿½
+		px.xsdFilePath="D:/ab.xsd";//Ð´ï¿½ï¿½ï¿½ï¿½xsdï¿½Ä¼ï¿½Â·ï¿½ï¿½
 		px.writeXSD();
 		px.traverseXML(px.importFile());
 		px.out.println("</xs:schema>");
 	}
 	
 	/**
-	 * µ¼ÈëxmlÎÄ¼þ
+	 * ï¿½ï¿½ï¿½ï¿½xmlï¿½Ä¼ï¿½
 	 */
 	public Element importFile(){
 		SAXBuilder reader=new SAXBuilder();
@@ -38,12 +38,14 @@ public class TraXmlToXsd {
 			root=doc.getRootElement();
 		} catch (JDOMException e) {
 			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		return root;
 	}
 	
 	/**
-	 * ½âÎöxml£¬Éú³Éxsd
+	 * ï¿½ï¿½ï¿½ï¿½xmlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xsd
 	 */
 	public void traverseXML(Element element){
 		List<Object> elList=element.getChildren();
@@ -66,7 +68,7 @@ public class TraXmlToXsd {
 	}
 	
 	/**
-	 * ¿ªÊ¼Ð´xsd
+	 * ï¿½ï¿½Ê¼Ð´xsd
 	 */
 	public void writeXSD(){
 		try {

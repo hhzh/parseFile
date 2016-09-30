@@ -1,4 +1,4 @@
-package parseXML;
+package com.parseXML;
 
 import java.io.File;
 import java.util.HashMap;
@@ -34,11 +34,11 @@ public class Dom4xsd {
 //		Iterator<Attribute> itAtt=element.elementIterator();
 //		while(itAtt.hasNext()){
 //			Attribute att=itAtt.next();
-//			System.out.println("½ÚµãÃû£º "+att.getName()+"---½ÚµãÖµ£º "+att.getValue());
+//			System.out.println("ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ "+att.getName()+"---ï¿½Úµï¿½Öµï¿½ï¿½ "+att.getValue());
 //		}
 //		
 //		if(!"".equals(element.getTextTrim())){
-//			System.out.println("++ÎÄ±¾ÄÚÈÝ£º "+element.getTextTrim());
+//			System.out.println("++ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ "+element.getTextTrim());
 //		}
 //		
 //		Iterator<Element> it=element.elementIterator();
@@ -56,8 +56,8 @@ public class Dom4xsd {
 		List<Element> list=element.elements();
 		Map<Integer, String> map=new HashMap<Integer, String>();
 		count++;
-//		System.out.println("#######  µÚ "+count+" ´Î");
-		if(0!=list.size()){System.out.println("#######  µÚ "+count+" ´Î");
+//		System.out.println("#######  ï¿½ï¿½ "+count+" ï¿½ï¿½");
+		if(0!=list.size()){System.out.println("#######  ï¿½ï¿½ "+count+" ï¿½ï¿½");
 			for(Element el:list){
 				recursionXML(el);
 			}

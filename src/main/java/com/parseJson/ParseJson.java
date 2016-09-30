@@ -1,4 +1,4 @@
-package parseJson;
+package com.parseJson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
