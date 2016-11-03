@@ -1,15 +1,33 @@
 package com.test;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class Test {
 	public static void main(String[] args) {
-		Map<Integer,String> map=new HashMap<Integer, String>();
-		map.put(1, "name1");
-		map.put(2, "name2");
-		map.put(1, "name3");
-		map.put(4, "name2");
-		System.out.println(map.toString());
+		List<User> users = new ArrayList<User>();
+		users.add(new User(1, "tom"));
+		users.add(new User(1, "tom"));
+		users.add(new User(2, "lily"));
+		users.add(new User(3, "aa"));
+		users.add(new User(2, "lily"));
+		//for (User user : users) {
+		//	if (user.getName().equals("lily")) {
+		//		users.remove(user);
+		//	}
+		//}
+
+		Iterator<User> iterator=users.iterator();
+		while (iterator.hasNext()) {
+			User user=iterator.next();
+			if (user.getName().equals("lily")) {
+				iterator.remove();
+			}
+		}
+
+		for (User user : users) {
+			System.out.println(user.toString());
+		}
 	}
 }
