@@ -1,5 +1,6 @@
 package com.test;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 public class TestBigd {
@@ -21,8 +22,18 @@ public class TestBigd {
         //BigDecimal res=ab.subtract(ac).subtract(ad);
         //System.out.println(res);
 
-        List<String>employee=new ArrayList<String>();
-        employee.add("add");
-        System.out.println(employee.get(0));
+        //List<String>employee=new ArrayList<String>();
+        //employee.add("add");
+        //System.out.println(employee.get(0));
+
+        //BigDecimal ab = new BigDecimal(3815.123);
+        //BigDecimal re=ab.divide(new BigDecimal("1000"),3,BigDecimal.ROUND_CEILING);
+        //re = re.subtract(new BigDecimal(3));
+        //re=re.setScale(0,BigDecimal.ROUND_DOWN);
+        //System.out.println(re);
+
+        BigDecimal ab = new BigDecimal(5);
+        ab = ab.add(ab.subtract(new BigDecimal(2)).multiply(new BigDecimal(2)));
+        System.out.println(ab);
     }
 }
