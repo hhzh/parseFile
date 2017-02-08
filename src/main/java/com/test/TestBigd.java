@@ -32,8 +32,12 @@ public class TestBigd {
         //re=re.setScale(0,BigDecimal.ROUND_DOWN);
         //System.out.println(re);
 
-        BigDecimal ab = new BigDecimal(5);
-        ab = ab.add(ab.subtract(new BigDecimal(2)).multiply(new BigDecimal(2)));
-        System.out.println(ab);
+        //BigDecimal ab = new BigDecimal(5);
+        //ab = ab.add(ab.subtract(new BigDecimal(2)).multiply(new BigDecimal(2)));
+        //System.out.println(ab);
+
+        BigDecimal temp = BigDecimal.ZERO;
+        temp = temp.add(temp.negate());
+        System.out.println(temp);
     }
 }
