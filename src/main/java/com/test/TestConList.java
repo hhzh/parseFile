@@ -7,7 +7,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class TestConList {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<Integer>();
 
         //List<Integer> list = new CopyOnWriteArrayList<Integer>();
         List<Integer> list1 = new ArrayList<Integer>();
