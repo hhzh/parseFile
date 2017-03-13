@@ -1,8 +1,11 @@
 package com.test;
 
+import java.util.List;
+
 public class User {
     private Integer id;
     private String name;
+    private List<String> friends;
 
     public User() {
 
@@ -31,6 +34,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<String> getFriends() {
+        return friends;
+    }
+
+    public void setFriends(List<String> friends) {
+        this.friends = friends;
     }
 
     @Override
