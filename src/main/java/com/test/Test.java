@@ -12,6 +12,7 @@ public class Test {
         users.add(new User(2, "lily"));
         users.add(new User(3, "aa"));
         users.add(new User(2, "lily"));
+
         //for (User user : users) {
         //	if (user.getName().equals("lily")) {
         //		users.remove(user);
