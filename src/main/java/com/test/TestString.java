@@ -7,8 +7,13 @@ public class TestString {
         //String cityCode = businessCode.substring(0, 6);
         //System.out.println(cityCode);
 
-        String res = "nullnull看到nullnull";
-        System.out.println(removeEndNullString(res));
+        //String res = "nullnull看到nullnull";
+        //System.out.println(removeEndNullString(res));
+
+        String str="刊bac";
+        byte[] bytes = str.getBytes();
+        System.out.println(bytes.toString());
+        System.out.println(new String(bytes));
     }
 
     private static String removeNullString(String note) {
