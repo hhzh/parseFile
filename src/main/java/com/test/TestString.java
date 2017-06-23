@@ -1,5 +1,8 @@
 package com.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TestString {
 
     public static void main(String[] args) {
@@ -15,21 +18,32 @@ public class TestString {
         //System.out.println(bytes.toString());
         //System.out.println(new String(bytes));
 
-        String content = "{\"text\":\"薛泳回答了您的专家咨询.\",\"type\":1,\"consultid\":210,\"answerid\":45}";
-        content = content.substring(1, content.length() - 1);
-        String[] split = content.split(",");
-        for (String s : split) {
-            String[] split1 = s.split(":");
-            for (int i = 0; i < split1.length; i++) {
-                if (split1[i].contains("\"")) {
-                    split1[i] = split1[i].substring(1, split1[i].length() - 1);
-                }
-            }
-            for (String s1 : split1) {
-                System.out.println(s1);
-            }
-            System.out.println();
+        //String content = "{\"text\":\"薛泳回答了您的专家咨询.\",\"type\":1,\"consultid\":210,\"answerid\":45}";
+        //content = content.substring(1, content.length() - 1);
+        //String[] split = content.split(",");
+        //for (String s : split) {
+        //    String[] split1 = s.split(":");
+        //    for (int i = 0; i < split1.length; i++) {
+        //        if (split1[i].contains("\"")) {
+        //            split1[i] = split1[i].substring(1, split1[i].length() - 1);
+        //        }
+        //    }
+        //    for (String s1 : split1) {
+        //        System.out.println(s1);
+        //    }
+        //    System.out.println();
+        //}
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(6);
+        list.add(7);
+        String ids = "";
+        for (Integer integer : list) {
+            ids += integer + ",";
         }
+
+        System.out.println(ids);
+        System.out.println(ids.substring(0, ids.length() - 1));
     }
 
     private static String removeNullString(String note) {
