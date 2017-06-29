@@ -1,7 +1,17 @@
 package com.test;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoField;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class TestString {
 
@@ -37,13 +47,32 @@ public class TestString {
         list.add(1);
         list.add(6);
         list.add(7);
-        String ids = "";
-        for (Integer integer : list) {
-            ids += integer + ",";
-        }
+        //String ids = "";
+        //for (Integer integer : list) {
+        //    ids += integer + ",";
+        //}
+        //
+        //System.out.println(ids);
+        //System.out.println(ids.substring(0, ids.length() - 1));
 
-        System.out.println(ids);
-        System.out.println(ids.substring(0, ids.length() - 1));
+        //list.forEach(System.out::println);
+
+        //IntStream.rangeClosed(1, 100).filter(n -> n % 2 == 0).forEach(n-> System.out.print(n+","));
+
+        //Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1], t[0] + t[1]}).limit(20).forEach(
+        //        t -> System.out.println("(" + t[0] + "," + t[1] + ")"));
+
+        System.out.println(new Date());
+        System.out.println(LocalDate.of(2017,6,29));
+        System.out.println(LocalDate.now());
+        System.out.println(LocalDateTime.now());
+        System.out.println(LocalTime.now());
+        System.out.println(ChronoField.YEAR);
+        LocalDate localDate = LocalDate.now();
+        System.out.println(localDate.with(TemporalAdjusters.firstDayOfMonth()));
+        new ArrayList<>();
+        Object object=null;
+
     }
 
     private static String removeNullString(String note) {
