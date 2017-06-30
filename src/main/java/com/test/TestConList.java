@@ -10,7 +10,7 @@ public class TestConList {
         //List<Integer> list = new ArrayList<Integer>();
 
         //List<Integer> list = new CopyOnWriteArrayList<Integer>();
-        List<Integer> list1 = new ArrayList<Integer>();
+        List<Integer> list1 = new ArrayList<>();
         list1.add(5);
         list1.add(1);
         list1.add(3);
@@ -37,7 +37,7 @@ public class TestConList {
         //    System.out.println(integer);
         //}
 
-        List<Integer> tempList = new ArrayList<Integer>();
+        List<Integer> tempList = new ArrayList<>();
         tempList.add(5);
         tempList.add(8);
         //for (Integer integer : list1) {

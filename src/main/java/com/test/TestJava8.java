@@ -1,6 +1,12 @@
 package com.test;
 
+import com.sun.org.apache.regexp.internal.RE;
+import jdk.nashorn.internal.ir.ReturnNode;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class TestJava8 {
 
@@ -23,9 +29,23 @@ public class TestJava8 {
         //new ArrayList<>();
         //Object object = null;
 
-        Optional<User> userOptional = Optional.empty();
-        System.out.println(userOptional.map(user -> user.getName()));
-        Optional<Object> o = Optional.ofNullable(null);
-        System.out.println(Optional.ofNullable(null));
+        //Optional<User> userOptional = Optional.empty();
+        //System.out.println(userOptional.map(user -> user.getName()));
+        //Optional<Object> o = Optional.ofNullable(null);
+        //System.out.println(Optional.ofNullable(null));
+
+        List<User> users = new ArrayList<>();
+        users.add(new User(1));
+        users.add(new User(22));
+        users.add(new User(5));
+        users.forEach(user -> user.setName("ZhangSan"));
+        //List<User> zhangSan = users.stream().map(user -> {
+        //    user.setName("ZhangSan");
+        //    return user;
+        //}).collect(Collectors.toList());
+        //zhangSan.forEach(System.out::println);
+
+        users.forEach(System.out::println);
+        System.out.println(users.size());
     }
 }
