@@ -4,9 +4,11 @@ import com.sun.org.apache.regexp.internal.RE;
 import jdk.nashorn.internal.ir.ReturnNode;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TestJava8 {
 
@@ -34,18 +36,31 @@ public class TestJava8 {
         //Optional<Object> o = Optional.ofNullable(null);
         //System.out.println(Optional.ofNullable(null));
 
-        List<User> users = new ArrayList<>();
-        users.add(new User(1));
-        users.add(new User(22));
-        users.add(new User(5));
-        users.forEach(user -> user.setName("ZhangSan"));
+        //List<User> users = new ArrayList<>();
+        //users.add(new User(1));
+        //users.add(new User(22));
+        //users.add(new User(5));
+        //users.forEach(user -> user.setName("ZhangSan"));
         //List<User> zhangSan = users.stream().map(user -> {
         //    user.setName("ZhangSan");
         //    return user;
         //}).collect(Collectors.toList());
         //zhangSan.forEach(System.out::println);
 
+        //users.forEach(System.out::println);
+        //System.out.println(users.size());
+
+        List<User> users = new ArrayList<>();
+        users.add(new User(1, "Tony", "BeiJing", 20));
+        users.add(new User(5, "Kevin", "ShangHai", 18));
+        users.add(new User(6, "Alan", "ShangHai", 22));
+        users.add(new User(3, "Hugo", "BeiJing", 19));
+        users.add(new User(9, "Martin","BeiJing", 39));
+
+        //users = users.stream().sorted(Comparator.comparing(User::getAge).reversed()).collect(Collectors.toList());
+
+        //users.stream().map(Collectors.groupingBy(User::getCity));
+
         users.forEach(System.out::println);
-        System.out.println(users.size());
     }
 }

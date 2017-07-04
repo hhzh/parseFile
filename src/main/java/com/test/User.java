@@ -5,6 +5,8 @@ import java.util.List;
 public class User {
     private Integer id;
     private String name;
+    private String city;
+    private Integer age;
     private List<String> friends;
 
     public User() {
@@ -18,6 +20,13 @@ public class User {
     public User(Integer id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public User(Integer id, String name, String city, Integer age) {
+        this.id = id;
+        this.name = name;
+        this.city = city;
+        this.age = age;
     }
 
     public Integer getId() {
@@ -36,6 +45,22 @@ public class User {
         this.name = name;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
     public List<String> getFriends() {
         return friends;
     }
@@ -49,6 +74,8 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", city='" + city + '\'' +
+                ", age=" + age +
                 '}';
     }
 }
