@@ -5,7 +5,9 @@ import jdk.nashorn.internal.ir.ReturnNode;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -59,8 +61,13 @@ public class TestJava8 {
 
         //users = users.stream().sorted(Comparator.comparing(User::getAge).reversed()).collect(Collectors.toList());
 
-        //users.stream().map(Collectors.groupingBy(User::getCity));
+        Map<String, List<User>> collect = users.stream().collect(Collectors.groupingBy(User::getCity));
+        collect.forEach((k,v)-> System.out.println(k+"="+v));
 
-        users.forEach(System.out::println);
+        //users.forEach(System.out::println);
+
+        //Map<String, String> map = new HashMap<>();
+        //map.put("1,", "v1");
+        //map.put("2", "v2");
     }
 }
