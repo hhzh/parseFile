@@ -22,14 +22,7 @@ public class TestJava8 {
         //Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1], t[0] + t[1]}).limit(20).forEach(
         //        t -> System.out.println("(" + t[0] + "," + t[1] + ")"));
 
-        //System.out.println(new Date());
-        //System.out.println(LocalDate.of(2017, 6, 29));
-        //System.out.println(LocalDate.now());
-        //System.out.println(LocalDateTime.now());
-        //System.out.println(LocalTime.now());
-        //System.out.println(ChronoField.YEAR);
-        //LocalDate localDate = LocalDate.now();
-        //System.out.println(localDate.with(TemporalAdjusters.firstDayOfMonth()));
+
         //new ArrayList<>();
         //Object object = null;
 
@@ -61,8 +54,8 @@ public class TestJava8 {
 
         //users = users.stream().sorted(Comparator.comparing(User::getAge).reversed()).collect(Collectors.toList());
 
-        Map<String, List<User>> collect = users.stream().collect(Collectors.groupingBy(User::getCity));
-        collect.forEach((k,v)-> System.out.println(k+"="+v));
+        //Map<String, List<User>> collect = users.stream().collect(Collectors.groupingBy(User::getCity));
+        //collect.forEach((k,v)-> System.out.println(k+"="+v));
 
         //users.forEach(System.out::println);
 

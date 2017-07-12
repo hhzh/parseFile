@@ -3,6 +3,15 @@ package com.blog;
 public class Apple {
     private String color;
     private Integer weight;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Apple(String color, Integer weight) {
         this.color = color;
