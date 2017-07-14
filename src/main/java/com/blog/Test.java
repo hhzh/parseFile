@@ -1,10 +1,12 @@
 package com.blog;
 
 
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -83,9 +85,60 @@ public class Test {
         //    System.out.println(apple);
         //});
 
-        apples.sort(Comparator.comparing(apple -> apple.getWeight()));
-        apples.forEach(System.out::println);
+        //apples.sort(Comparator.comparing(apple -> apple.getWeight()));
+        //apples.forEach(System.out::println);
+
+        apples.replaceAll(apple -> {
+            apple.setColor("red");
+            return apple;
+        });
+
+        // 替换集合中的每个元素
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(3);
+        numbers.add(2);
+        numbers.add(5);
+        //numbers.replaceAll(number -> number * 2);
+        //System.out.println(numbers);// 输出 4,6,10
+        //boolean b = numbers.removeIf(number -> number ==2);
+        //System.out.println(b);
+        //Integer remove = numbers.remove(9);
+        //System.out.println(remove);
+        //System.out.println(numbers);
+
+        //List<String> list = new ArrayList<>();
+        //boolean ddd = list.remove("ddd");
+        //System.out.println(ddd);
+        //Map<String, Integer> carInventory = new HashMap<>();
+        //Integer count = 0;
+        //if (carInventory.containsKey("Aston Martin")) {
+        //   int count = carInventory.get("Aston Martin");
+        //    System.out.println(count);
+        //}
+        //
+        //
+        //Integer count = carInventory.getOrDefault("Aston Martin", 0);
+
+        List<String> cars = new ArrayList<>();
+        cars.add("Aston Martin");
+        cars.removeIf(car -> car.equals("Aston Martin"));
+        //System.out.println(add);
+
+
     }
+
+    //public String getData(String url) {
+    //    return cache.computeIfAbsent(url, this::getData);
+    //}
+    //
+    //public String getData(String url) {
+    //    String data = cache.get(url);
+    //    if (data == null) {
+    //        data = getData(url);
+    //        cache.put(url, data);
+    //    }
+    //    return data;
+    //}
 
     public String getCarInsuranceName(Person person) {
         if (person != null) {
