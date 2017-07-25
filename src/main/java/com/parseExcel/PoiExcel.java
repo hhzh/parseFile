@@ -18,7 +18,7 @@ public class PoiExcel {
     public static void main(String[] args) {
         //writeExcel();
         //writeExcel2();
-        readExcel();
+        //readExcel();
     }
 
     public static void writeExcel() {
