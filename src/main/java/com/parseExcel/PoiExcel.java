@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class PoiExcel {
     public static void main(String[] args) {
-        //writeExcel();
+        writeExcel();
         //writeExcel2();
         //readExcel();
     }
