@@ -14,6 +14,7 @@ public class Demo {
         user1.setName("lisi");
         list.add(user1);
         list.add(null);
+
         for (User user2 : list) {
             System.out.println(user2);
         }

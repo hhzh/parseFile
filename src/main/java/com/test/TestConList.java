@@ -10,15 +10,15 @@ public class TestConList {
         //List<Integer> list = new ArrayList<Integer>();
 
         //List<Integer> list = new CopyOnWriteArrayList<Integer>();
-        List<Integer> list1 = new ArrayList<Integer>();
+        List<Integer> list1 = new ArrayList<>();
         list1.add(5);
         list1.add(1);
         list1.add(3);
         list1.add(8);
         list1.add(7);
 
-        List<Integer> list = list1.subList(1, list1.size());
-        System.out.println(list);
+        //List<Integer> list = list1.subList(1, list1.size());
+        //System.out.println(list);
         //if (list1.contains(3)) {
         //    System.out.println("hh");
         //} else {
@@ -37,19 +37,19 @@ public class TestConList {
         //    System.out.println(integer);
         //}
 
-        //List<Integer> tempList = new ArrayList<Integer>();
-        //tempList.add(5);
-        //tempList.add(8);
+        List<Integer> tempList = new ArrayList<>();
+        tempList.add(5);
+        tempList.add(8);
         //for (Integer integer : list1) {
         //    if (integer == 3) {
         //        tempList.remove(integer);
         //    }
         //}
 
-        //list1.removeAll(tempList);
-        //
-        //for (Integer integer : list1) {
-        //    System.out.println(integer);
-        //}
+        list1.removeAll(tempList);
+
+        for (Integer integer : list1) {
+            System.out.println(integer);
+        }
     }
 }
