@@ -8,6 +8,7 @@ import java.time.temporal.ChronoField;
 import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -44,10 +45,10 @@ public class TestString {
         //    }
         //    System.out.println();
         //}
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(6);
-        list.add(7);
+        //List<Integer> list = new ArrayList<>();
+        //list.add(1);
+        //list.add(6);
+        //list.add(7);
         //String ids = "";
         //for (Integer integer : list) {
         //    ids += integer + ",";
@@ -56,7 +57,12 @@ public class TestString {
         //System.out.println(ids);
         //System.out.println(ids.substring(0, ids.length() - 1));
 
-
+        String aa = "23423";
+        String[] split = aa.split(",");
+        System.out.println(split.length);
+        for (String s : split) {
+            System.out.println(s);
+        }
 
     }
 
