@@ -1,12 +1,8 @@
 package com.test;
 
-import sun.nio.cs.US_ASCII;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import static java.util.Locale.US;
 
 public class TestCall {
 

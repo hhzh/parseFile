@@ -24,13 +24,11 @@ public class TestUserList {
 
         User user = new User();
         user.setId(1);
-        user.clone();
 
 
 
         List<User> users = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-            Object clone = user.clone();
             user.setName("name"+i);
             users.add(user);
         }
