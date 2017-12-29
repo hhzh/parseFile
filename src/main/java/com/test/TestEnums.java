@@ -9,14 +9,10 @@ public enum  TestEnums {
     private Integer code;
     private String ms;
 
-    public TestEnums(Integer code) {
+    TestEnums(Integer code) {
         this.code = code;
     }
 
-    public TestEnums(Integer code, String ms) {
-        this.code = code;
-        this.ms = ms;
-    }
 
     public Integer getCode() {
         return code;
