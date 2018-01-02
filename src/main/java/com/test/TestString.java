@@ -53,7 +53,6 @@ public class TestString {
         //for (Integer integer : list) {
         //    ids += integer + ",";
         //}
-        //
         //System.out.println(ids);
         //System.out.println(ids.substring(0, ids.length() - 1));
 
