@@ -56,12 +56,13 @@ public class TestString {
         //System.out.println(ids);
         //System.out.println(ids.substring(0, ids.length() - 1));
 
-        String aa = "23423";
-        String[] split = aa.split(",");
-        System.out.println(split.length);
-        for (String s : split) {
-            System.out.println(s);
-        }
+        //String aa = "23423";
+        //String[] split = aa.split(",");
+        //System.out.println(split.length);
+        //for (String s : split) {
+        //    System.out.println(s);
+        //}
+        System.out.println(Runtime.getRuntime().availableProcessors());
 
     }
 
