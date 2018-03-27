@@ -21,8 +21,10 @@ public class Demo {
 
         //System.out.println(Runtime.getRuntime().availableProcessors());
 
-        for (int i = 1; i < 10001; i++) {
-            System.out.println("D:/imgtest/img/" + i + ".jpg");
-        }
+        //for (int i = 1; i < 10001; i++) {
+        //    System.out.println("D:/imgtest/img/" + i + ".jpg");
+        //}
+        String name = "cropImg2.jpg";
+        System.out.println(name.substring(name.lastIndexOf(".") + 1));
     }
 }
