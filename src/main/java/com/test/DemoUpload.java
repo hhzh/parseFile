@@ -17,14 +17,14 @@ import java.io.IOException;
 public class DemoUpload {
     public static void main(String[] args) throws IOException, InterruptedException {
         CloseableHttpClient client = HttpClients.createDefault();
-        HttpPost post = new HttpPost("http://10.100.1.96:30080/testimg/firstappend");
-        HttpPost post2 = new HttpPost("http://10.100.1.96:30080/testimg/append");
+        HttpPost post = new HttpPost("http://10.100.1.89/testimg/firstappend");
+        HttpPost post2 = new HttpPost("http://10.100.1.89/testimg/append");
 
-        File file = new File("test.jpg");
+        File file = new File("mm.png");
         System.out.println(file.length());
         FileInputStream inputStream = new FileInputStream(file);
-        String result = null;
-        byte[] temp = new byte[6024];
+        String result = "";
+        byte[] temp = new byte[4667];
         int i = 1;
         while (inputStream.read(temp) != -1) {
             System.out.println("---");
@@ -40,6 +40,9 @@ public class DemoUpload {
                     System.out.println("first upload success:" + message);
                 }
             } else {
+                //if (i == 4) {
+                //    break;
+                //}
                 MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();
                 multipartEntityBuilder.addBinaryBody("file", temp, ContentType.MULTIPART_FORM_DATA, "jpg");
                 multipartEntityBuilder.addTextBody("groupPath", result, ContentType.MULTIPART_FORM_DATA);
@@ -66,5 +69,9 @@ public class DemoUpload {
         //}
         //System.out.println(httpResponse);
         inputStream.close();
+    }
+
+    public void testLogin() {
+
     }
 }
