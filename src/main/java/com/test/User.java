@@ -1,5 +1,6 @@
 package com.test;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class User {
@@ -8,6 +9,7 @@ public class User {
     private String city;
     private Integer age;
     private List<String> friends;
+    private BigDecimal amount;
 
     public User() {
 
@@ -67,6 +69,14 @@ public class User {
 
     public void setFriends(List<String> friends) {
         this.friends = friends;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
     }
 
     @Override
