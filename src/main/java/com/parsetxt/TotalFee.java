@@ -4,12 +4,10 @@ import java.io.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class AutoGenerateEntity {
+public class TotalFee {
 
     public static void main(String[] args) throws Exception {
-        //final File file = new File("demo.txt");
-        //System.out.println(file.getAbsolutePath());
-        new AutoGenerateEntity().generateEntity("demo.txt");
+        new TotalFee().generateEntity("demo.txt");
     }
 
     public void generateEntity(String fileName) throws Exception {
